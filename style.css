@@ -1018,5 +1018,99 @@ width: max-content;
   width: 160px;
 }
 
-
+@media screen and (max-width: 824px){
+.footer .content h4{
+    font-size: 14px;
+  }
+  .footer .content h5{
+    font-size: 12px;
+  }
+  .f-col1{
+    max-width: 150px;
+  }
+  .f-col1 .logo{
+    width: 100px;
+  }
+  .f-col1 .title{
+    font-size: 12px;}
+  .f-col1 .icons{
+    font-size: 20px;
+  }
+  .f-col1 .SCC{
+    max-width: 120px;
+    max-height: 120px;
+  }
+  .f-col2{
+    max-width: 150px;
+  }
+  .f-col3{
+    max-width: 150px;
+  }
+  .f-col4{
+    max-width: 150px;
+  }
+  .f-col4 img{
+    width: 100px;
+  }
+}
+@media screen and (max-width: 625px){
+  .footer .content h4{
+      font-size: 12px;
+    }
+    .footer .content h5{
+      font-size: 10px;
+    }
+    .f-col1{
+      max-width: 100px;
+      margin-right: 20px;
+    }
+    .f-col1 .logo{
+      width: 50px;
+      padding-left: 15px;
+    }
+    .f-col1 .title{
+      font-size: 10px;}
+    .f-col1 .icons{
+      font-size: 18px;
+    }
+    .f-col1 .SCC{
+      max-width: 80px;
+      max-height: 80px;
+    }
+    .f-col2{
+      max-width: 80px;
+      font-size: 10px;
+    }
+    .f-col2 .app, .f-col2 .play{
+      max-width: 80px;
+    }
+    .f-col3{
+      max-width: 80px;
+      font-size: 8px;
+    }
+    .f-col4{
+      max-width: 80px;
+      font-size: 10px;
+    }
+    .f-col4 input{
+      border-radius: 5px;
+      font-size: 10px;
+      padding: 2px 1px ;
+    }
+    .f-col4 button{
+      background-color: orange;
+      color: #222939;
+      padding: 2px 2px;
+      border-radius: 5px;
+      width: auto;
+      font-size: 10px;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .f-col4 img{
+      width: 80px;
+    }
+  }
 /* End Footer */
