@@ -10,6 +10,7 @@
 }
 body{
   font-family: "Work Sans", sans-serif;
+  margin: 0;
 }
 
 /* End Global Rules */
@@ -126,7 +127,11 @@ header{
   }
   }
 /* End header */
-.JOT{
+
+
+
+
+.press{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -149,23 +154,23 @@ img{
   max-width:625px;
 }
 @media screen and (max-width: 877px) {
-  .JOT{
+  .press{
     margin-top: 70px;
     flex-direction: column;
     align-items: center;  
   }
-  .JOT img{
+  .press img{
     width: 500px;
     }
 }
 @media screen and (max-width: 750px) {
-  .JOT{
+  .press{
   margin-top: 70px;
   flex-direction: column;
   }
 }
 @media screen and (max-width: 500px) {
-  .JOT img{
+  .press img{
   width: 350px;
   }
 }
@@ -192,7 +197,7 @@ a{
   flex-direction: column;
   align-content: center;
   width: 410px;
-  height: 600px;
+  height: 800px;
   background-image: linear-gradient(to top,#AEC0CE, #ECECF2);
   overflow: hidden;
   transition: 0.5s ;
@@ -253,6 +258,8 @@ a{
     position: absolute;
     bottom: 0;
     right: 0;
+    width: 410px;
+    max-height:410px ;
   }
   .item img{
     display: block;
@@ -262,7 +269,7 @@ a{
   
   #list{
   display: flex;
-  width: max-content;
+  width: max-content ;
   }
   #cards{
     width: 1280px;
@@ -307,7 +314,6 @@ a{
       width: calc(33.3vw - 17px);
     }
   }
-  
   @media screen and (max-width:1024px) {
     .item{
       width: calc(33.3vw - 17px);
@@ -325,114 +331,122 @@ a{
     }
 
 
-    /* Start Footer */
+/* Start Footer */
+/* font-family: "Montserrat", sans-serif; */
+/* font-family: "Varela Round", sans-serif; */
 .footer{
-  border-radius: 21px;
   background-color: #222939;
+  font-family: "Montserrat", sans-serif; 
   color: white;
   font-size: 12px;
-  padding: 30px 40px 30px 40px;
+  overflow: hidden;
+  border: 0px;
 }
-
-.footer .content{
+svg{
+  width: 200%;
+  height: 100px;
+  border: 0px;
+}
+.footer .cont{
+  border: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
+  padding: 0px 40px 20px 40px;
+  gap: 250px;
 }
 
-.footer .content h4{
-  font-size: 17px;
-  font-weight: 500;
-}
-.footer .content h5{
-  font-size: 14px;
-}
-
-
+/* Col 1 */
 .f-col1{
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
-  max-width: 260px;
+  align-items: flex-start;
+  max-width: 250px;
 }
 .f-col1 .logo{
-  width: 180px;
+  width: 150px;
+  margin-left: -5px;
 }
-
-.f-col1 .title{
-  font-size: 16px;
+.title{
+  font-size: 17px;
   font-weight: 600;
-  padding-left: 15px;
 }
 .f-col1 .icons{
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  color: orange;
+  color: #FeAA14;
   font-size: 50px;
-  padding-bottom: 15px;
 }
 .f-col1 .SCC{
+  margin-top: 5px;
   width: auto;
   height: auto;
-  max-width: 255px;
-  max-height: 255px;
+  max-width: 165px;
 }
 
-
+/* Col 2 */
 .f-col2{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  max-width: 260px;
+  max-width: 250px;
   gap: 20px;
 }
-.f-col3{
-  max-width: 260px;
+.f-col2 h4{
+  font-size: larger;
 }
-
-.f-col3 p{
+.f-col2 p{
   font-size: larger;
 }
 
-
-.f-col4{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+/* Col 3 */
+.f-col3{
   max-width: 260px;
-  gap: 15px;
 }
-
-.f-col4 .title{
-  font-size: 18px;
-  padding-left: 3px;
-  margin-bottom: -1px;
+.f-col3 p{
+  font-size: larger;
 }
-
-.f-col4 input{
-  border-radius: 10px;
+/* .f-col3 a{
+  color: white;
   font-size: 16px;
-  padding: 8px 4px ;
-}
-.f-col4 button{
-  background-color: orange;
-  color: #222939;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  width: auto;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  cursor: pointer;
+  font-weight: 400;
+} */
+.f-col3 img{
+  width: 150px;
+  margin-top: 10px;
 }
 
-.f-col4 img{
-  margin-top: 40px;
-  width: 160px;
+/* Footer Responsive */
+@media screen and (max-width: 1000px){
+  .footer .cont{
+    gap: 150px;
+  }
 }
+@media screen and (max-width: 800px){
+  .footer .cont{
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 600px){
+  .footer .cont{
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 525px){
+  .footer .cont{
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .footer .f-col3{
+    display: flex;
+    align-items: flex-end;
+  }
 
+  .footer .f-col3 img{
+    width: 150px;
+    height: 150px;
+  }
 
+  }
 /* End Footer */

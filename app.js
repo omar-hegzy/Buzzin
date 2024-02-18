@@ -113,11 +113,11 @@ hiddenElementsL.forEach((el) => observerL.observe(el));
 
 //Start logos
 var copy = document.querySelector(".slider").cloneNode(true);
-document.querySelector(".logos").appendChild(copy);
+document.querySelector(".hover").appendChild(copy);
 // ENd logos
 
 // Start communities
 var copy = document.querySelector(".c-slider").cloneNode(true);
-document.querySelector(".communities").appendChild(copy);
+document.querySelector(".c-hover").appendChild(copy);
 // ENd communities
 
