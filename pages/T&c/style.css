@@ -194,7 +194,7 @@ header a:hover{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
+  font-size: 16px;
   color: grey;
   margin-bottom: 30px;
   padding-left: 5px;
@@ -204,7 +204,7 @@ header a:hover{
 font-weight: 600;
 }
 .details .right {
-  font-size: 10px;
+  font-size: 16px;
 }
 .details .right .bot{
   font-style: italic;
@@ -240,6 +240,8 @@ font-weight: 600;
 }
 .item .question .text{
   width: calc(100% - 10px);
+  font-size: 20px;
+  font-weight: 600;
 }
 .item .question .dropdown{
   width: max-content;
