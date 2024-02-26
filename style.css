@@ -1,7 +1,16 @@
 /* Start Global Rules */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url('./gotham/GothamRounded-Medium.otf');
+}
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url('./gotham/GothamRounded-Bold.otf');
+  font-weight: bold;
+}
 /* font-family: "Montserrat", sans-serif; */
 /* font-family: "Varela Round", sans-serif; */
 
@@ -91,7 +100,8 @@ header a{
   color: #222939;
   font-size: 1.3rem;
   /* font-family:  */
-  font-weight: 700;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 header a:hover{
   color:#FeAA14;
@@ -125,7 +135,7 @@ header a:hover{
   color: #222939;
   padding: 0.5rem 1.8rem;
   border-radius: 20px;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Gotham Rounded";
   font-size: 1.05rem;
   font-weight: bold;
   border: none;
@@ -155,21 +165,22 @@ header a:hover{
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu.open{
-  height: 330px;
-
+  height: 300px;
 }
 .dropdown_menu li{
   padding: 0.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 .dropdown_menu .act_btn{
   width: 100%;
   display: flex;
   justify-content: center;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 /* responsive */
 @media screen and (max-width: 1015px) {
@@ -251,14 +262,14 @@ header a:hover{
 }
 .carousel .list .item .introduce .title{
     font-size: 2em;
-    font-family: "Varela Round", sans-serif;
+    font-family: "Gotham Rounded";
     font-weight: 500;
     line-height: 1em;
     padding-bottom: 0.2em;
 }
 .carousel .list .item .introduce .topic{
     font-size: 2.5em;
-    font-family: "Varela Round", sans-serif;
+    font-family: "Gotham Rounded";
     font-weight: 500;
     line-height: 1em;
     padding-bottom: 0.5em;
@@ -270,7 +281,7 @@ header a:hover{
     margin-right: 50px;
 }
 .carousel .list .item .introduce .seeMore{
-    font-family: "Varela Round", sans-serif;
+  font-family: "Gotham Rounded";
     margin-top: 1.2em;
     padding: 5px 0;
     border: none;
@@ -427,8 +438,8 @@ header a:hover{
 }
 .carousel .list .item:nth-child(2) .introduce span::before{
     position: absolute;
-    left: 61.4%;
-    bottom: 80%;
+    left: 66.3%;
+    bottom: 79.5%;
     width: 50px;
     height: 50px;
     content: '';
@@ -452,8 +463,8 @@ header a:hover{
     overflow: auto;
 }
 .carousel.showDetail .list .item:nth-child(2) .detail .title{
-    font-size: 3em;
-    font-family: "Varela Round", sans-serif;
+    font-size: 40px;
+    font-family: "Gotham Rounded";
 }
 .carousel.showDetail .list .item:nth-child(2) .detail  .title,
 .carousel.showDetail .list .item:nth-child(2) .detail  .des{
@@ -461,7 +472,7 @@ header a:hover{
     animation: showContent 0.5s 1s ease-in-out 1 forwards;
 }
 .carousel.showDetail .list .item:nth-child(2) .detail  .des{
-    font-size: 1.3em;
+    font-size: 18px;
     animation-delay: 1.2s;
     font-family: "Montserrat", sans-serif; 
 }
@@ -470,7 +481,7 @@ header a:hover{
 }
 .arrows{
     position: absolute;
-    font-family: "Varela Round", sans-serif;
+    font-family: "Gotham Rounded";
     bottom: 120px;
     width: 1140px;
     max-width: 90%;
@@ -509,7 +520,7 @@ header a:hover{
     transform: translateX(-50%);
     border: none;
     border-bottom: 1px solid #555;
-    font-family: "Varela Round", sans-serif;
+    font-family: "Gotham Rounded";
     font-weight: bold;
     letter-spacing: 3px;
     background-color: transparent;
@@ -707,7 +718,8 @@ header a:hover{
   font-weight: 500;
   line-height: 1em;
   padding-bottom: 0.2em;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 .vid_section p{
   margin-top: 24px;
@@ -772,8 +784,8 @@ header a:hover{
 .Soultions h1{
   text-align: center;
   font-size: 2em;
-  font-weight: 500;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
   line-height: 1em;
   padding-bottom: 0.2em;
 }
@@ -817,6 +829,8 @@ header a:hover{
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 .hidden-r{
   opacity: 0;
@@ -935,6 +949,8 @@ z-index: 3;
   align-items: center;
   justify-content: center;
   max-height: 100vh;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 .slide-container{
   max-width: 1120px;
@@ -1078,6 +1094,8 @@ z-index: 3;
   font-weight: 500;
   line-height: 1em;
   padding-bottom: 0.2em;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 .pricing p{
   margin-top: 24px;
@@ -1106,6 +1124,8 @@ z-index: 3;
   font-weight: 500;
   line-height: 1em;
   padding-bottom: 0.2em;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 @keyframes slide {
   from{
@@ -1183,6 +1203,8 @@ z-index: 3;
   font-weight: 500;
   line-height: 1em;
   padding-bottom: 0.2em;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 @keyframes c-slide {
   from{
@@ -1283,6 +1305,10 @@ svg{
   padding: 0px 40px 20px 40px;
   gap: 250px;
 }
+.footer h3{
+  font-family: "Gotham Rounded";
+  font-weight: bold;
+}
 
 /* Col 1 */
 .f-col1{
@@ -1300,6 +1326,8 @@ svg{
 .title{
   font-size: 17px;
   font-weight: 600;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 .f-col1 .icons{
   color: #FeAA14;
@@ -1322,7 +1350,7 @@ svg{
   gap: 20px;
 }
 .f-col2 h4{
-  font-size: larger;
+  font-family: "Gotham Rounded";
 }
 .f-col2 p{
   font-size: larger;
