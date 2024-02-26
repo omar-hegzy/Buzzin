@@ -6,14 +6,23 @@
 /* font-family: "Varela Round", sans-serif; */
 
 body{
-    background-color: white;
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 body::-webkit-scrollbar{
   display: none;
 }
+*::-moz-selection { /* Code for Firefox */
+  background:#FeAA14;
+}
 
+*::selection {
+  background:#FeAA14;
+}
 li{
   list-style: none;
 }
@@ -74,15 +83,15 @@ a{
 /* Start Header */
 header{
   position: relative;
-  padding: 0 2rem;
+  padding: 15px 2rem 0px 2rem;
   z-index: 3;
 }
 header a{
   text-decoration: none;
   color: #222939;
-  font-size: 1rem;
-  font-family: "Varela Round", sans-serif;
-  font-weight: 600;
+  font-size: 1.3rem;
+  /* font-family:  */
+  font-weight: 700;
 }
 header a:hover{
   color:#FeAA14;
@@ -100,7 +109,7 @@ header a:hover{
   padding-top: 1px;
 }
 .navbar .logo img{
-  height: 55px;
+  height: 60px;
 }
 .navbar .links{
   display: flex;
@@ -114,10 +123,10 @@ header a:hover{
 .act_btn{
   background-color: orange;
   color: #222939;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.8rem;
   border-radius: 20px;
   font-family: "Varela Round", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.05rem;
   font-weight: bold;
   border: none;
   outline: none;
@@ -413,6 +422,20 @@ header a:hover{
     opacity: 0;
     pointer-events: none;
 }
+.carousel .list .item:nth-child(2) .introduce span{
+  color: #FeAA14;
+}
+.carousel .list .item:nth-child(2) .introduce span::before{
+    position: absolute;
+    left: 61.4%;
+    bottom: 80%;
+    width: 50px;
+    height: 50px;
+    content: '';
+    background-image: url(images/static.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .carousel.showDetail .list .item:nth-child(2) img{
     right: 65%;
     width: 45%;
@@ -442,7 +465,9 @@ header a:hover{
     animation-delay: 1.2s;
     font-family: "Montserrat", sans-serif; 
 }
-
+.carousel.showDetail .list .item:nth-child(2) .detail  .des li{
+  list-style: disc;
+}
 .arrows{
     position: absolute;
     font-family: "Varela Round", sans-serif;
@@ -500,8 +525,8 @@ header a:hover{
 }
 .carousel.showDetail #prev,
 .carousel.showDetail #next{
-    opacity: 0;
-    pointer-events: none;
+    opacity: 1;
+    /* pointer-events: none; */
 }
 .carousel::before{
     width: 500px;
@@ -787,6 +812,12 @@ header a:hover{
 /* End Price */
 
 /* Start Features */
+.Our_Features{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
 .hidden-r{
   opacity: 0;
   transition: all 2s;
@@ -853,17 +884,17 @@ z-index: 3;
   width: 1250px;
   max-width: 100%;
   overflow: hidden;
-  margin: 100px auto;
+  margin-bottom: 50px;
+  margin-right: 65px;
   scroll-behavior: smooth;
   scroll-snap-type: both;
-
 }
 #fcards::-webkit-scrollbar{
   display: none;
 }
 /*                       */
 .farrows{
-margin-left: 700px;
+/* margin-left: 700px; */
 }
 .farrows button{
   text-align: center;
@@ -900,12 +931,12 @@ margin-left: 700px;
 .ForCards{
   margin-top: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   max-height: 100vh;
 }
 .slide-container{
-  /* max-height: 40vh; */
   max-width: 1120px;
   width: 100%;
   padding: 40px 0;
@@ -924,12 +955,11 @@ margin-left: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 14px;
 }
 .slide-container .image-content{
   position: relative;
-  row-gap: 5px;
-  padding: 25px 0;
 }
 .slide-container .overlay{
   position: absolute;
@@ -960,19 +990,13 @@ margin-left: 700px;
   width: 300px;
   border-radius: 50%;
   background: #FFF;
-  padding: 3px;
   /* border: 4px solid #FeAA14; */
-}
-.img6{
-  height: 250px !important;
-  width: 250px !important;
 }
 .slide-container .card-image .card-img{
   height: 90%;
   width: 100%;
   object-fit:cover;
   border-radius: 50%;
-  
 }
 .slide-container .name{
   font-size: 18px;
@@ -980,7 +1004,7 @@ margin-left: 700px;
   color: #333;
 }
 .slide-container .description{
-  font-size: 14px;
+  font-size: 16px;
   color: #707070;
   text-align: center;
 }
@@ -996,8 +1020,8 @@ margin-left: 700px;
 }
 .slide-container a:hover{
   background: #FeAA14;
+  color: #222A3A;
 }
-
 .swiper-navBtn{
   color: #222A3A;
   transition: color 0.3s ease;
