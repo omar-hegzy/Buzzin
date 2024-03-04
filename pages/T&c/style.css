@@ -1,33 +1,49 @@
 /* Start Global Rules */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
-/* font-family: "Montserrat", sans-serif; */
-/* font-family: "Varela Round", sans-serif; */
 
 *{
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  margin: 0;
+}
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url('../../gotham/GothamRounded-Medium.otf');
+}
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url('../../gotham/GothamRounded-Bold.otf');
+  font-weight: bold;
+}
+*::-moz-selection { /* Code for Firefox */
+  background:#FeAA14;
 }
 
+*::selection {
+  background:#FeAA14;
+}
+/* font-family: "Montserrat", sans-serif; */
+/* font-family: ""Gotham Rounded"", sans-serif; */
+
 body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: white;
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 body::-webkit-scrollbar{
-display: none;
+  display: none;
 }
 
 li{
-list-style: none;
+  list-style: none;
 }
 a{
-text-decoration: none;
-color: white;
-font-size: 16px;
-font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 
 
@@ -76,15 +92,16 @@ font-family: "Montserrat", sans-serif;
 /* Start Header */
 header{
   position: relative;
-  padding: 0 2rem;
+  padding: 15px 2rem 0px 2rem;
   z-index: 3;
 }
 header a{
   text-decoration: none;
   color: #222939;
-  font-size: 1rem;
-  font-family: "Varela Round", sans-serif;
-  font-weight: 600;
+  font-size: 1.3rem;
+  /* font-family:  */
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 header a:hover{
   color:#FeAA14;
@@ -102,7 +119,7 @@ header a:hover{
   padding-top: 1px;
 }
 .navbar .logo img{
-  height: 55px;
+  height: 60px;
 }
 .navbar .links{
   display: flex;
@@ -116,10 +133,10 @@ header a:hover{
 .act_btn{
   background-color: orange;
   color: #222939;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.8rem;
   border-radius: 20px;
-  font-family: "Varela Round", sans-serif;
-  font-size: 0.8rem;
+  font-family: "Gotham Rounded";
+  font-size: 1.05rem;
   font-weight: bold;
   border: none;
   outline: none;
@@ -148,21 +165,22 @@ header a:hover{
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu.open{
-  height: 330px;
-
+  height: 300px;
 }
 .dropdown_menu li{
   padding: 0.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 .dropdown_menu .act_btn{
   width: 100%;
   display: flex;
   justify-content: center;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 /* responsive */
 @media screen and (max-width: 1015px) {
@@ -173,7 +191,6 @@ header a:hover{
   
   .navbar .toggle_btn{
     display: block;
-
   }
 
   .dropdown_menu{
@@ -185,7 +202,7 @@ header a:hover{
     left: 2rem;
     width: unset;
   }
-  }
+}
 /* End header */
 
 /*T&C  */
@@ -214,6 +231,21 @@ font-weight: 600;
 }
 
 
+@media screen and (max-width: 670px){
+  .details{
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+
+  }
+  .details .right{
+    font-size: 14px;
+    
+  }
+  .details p{
+    font-size: 12px;
+  }
+  }
 /*  */
 
 
@@ -223,51 +255,85 @@ font-weight: 600;
 
 
 /* Start Accordion */
-.item{
-  background-color: #E9E9E9;
-  min-width: 280px;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #c9c6c655;
-  margin-bottom: 20px;
+.accordion{
+  max-width: 850px;
+  width: 100%;
+  margin: 0 15px;
+  padding: 15px;
+}
+.accordion .accordion-content{
+  margin: 10px 0;
+  border-radius: 4px;
+
+  overflow: hidden;
+  max-width: 100%;
+}
+.accordion-content.open{
+  padding: 10px 0;
+}
+.accordion-content header{
+  padding: 15px 0;
   cursor: pointer;
-  transition: 0.5s ease;
+  justify-content: space-between;
+  transition: all 0.2s linear;
 }
-.item .question{
-  display: flex;
-  justify-content: start;
-  align-items: center;
+.accordion-content.open .acc-header{
+  min-height: 35px;
 }
-.item .question .text{
-  width: calc(100% - 10px);
-  font-size: 20px;
+.accordion-content header .title{
+  font-size:20px;
   font-weight: 600;
 }
-.item .question .dropdown{
-  width: max-content;
-  font-size: x-large;
-  transform: rotate(90deg);
-  transition: 0.5s ease;
-  cursor: pointer;
+.accordion-content header i{
+  font-size: 20px;
 }
-.item .answer{
-  overflow: hidden;
-  max-height: 0;
-  transition: 0.5s ease;
+.accordion-content .acc-description{
+  height: 0;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  font-weight: 500;
+  padding: 0 15px;
+  transition: all 0.2s linear;
 }
-.item.active{
-  background-color: #E9E9E9;
-  cursor: auto;
+.tc .head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.item.active .question .text{
-  font-weight: bold;
+
+@media screen and (max-width: 1000px){
+
+  .tc .head .title{
+    font-size: 28px;
+  }
+
+  .tc .head img{
+    width: 400px;
+  }
+
+  .tc{
+    max-width: 800px;
+  }
 }
-.item.active .question .dropdown{
-  transform: rotate(270deg);
+@media screen and (max-width: 850px){
+  .tc .head {
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tc .head .title{
+    font-size: 28px;
+  }
+  .Terms{
+    max-width: 600px;
+  }
 }
-.item.item.active .answer{
-  max-height: 10000px;
-}
+@media screen and (max-width: 600px){
+  .Terms{
+    width: 300px;
+  }
+  }
 /* End Accordion */
 
 
@@ -275,27 +341,31 @@ font-weight: 600;
 
 /* Start Footer */
 /* font-family: "Montserrat", sans-serif; */
-/* font-family: "Varela Round", sans-serif; */
+/* font-family: "Gotham Rounded", sans-serif; */
 .footer{
   background-color: #222939;
   font-family: "Montserrat", sans-serif; 
   color: white;
   font-size: 12px;
   overflow: hidden;
-  border: 0px;
+  border: none;
 }
 svg{
   width: 200%;
   height: 100px;
-  border: 0px;
+  border: none;
 }
 .footer .cont{
-  border: 0px;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 0px 40px 20px 40px;
   gap: 250px;
+}
+.footer h3{
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 
 /* Col 1 */
@@ -306,6 +376,7 @@ svg{
   justify-content: center;
   align-items: flex-start;
   max-width: 250px;
+  gap: 10px;
 }
 .f-col1 .logo{
   width: 150px;
@@ -314,8 +385,11 @@ svg{
 .title{
   font-size: 17px;
   font-weight: 600;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
-.f-col1 .icons{
+
+.f-col1 i, .icons{
   color: #FeAA14;
   font-size: 50px;
 }
@@ -333,10 +407,23 @@ svg{
   justify-content: space-between;
   align-items: flex-start;
   max-width: 250px;
-  gap: 20px;
+  gap: 10px;
+}
+.f-col2 .infor{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.f-col2 .contact-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
 }
 .f-col2 h4{
-  font-size: larger;
+  font-family: "Gotham Rounded";
 }
 .f-col2 p{
   font-size: larger;
@@ -345,18 +432,26 @@ svg{
 /* Col 3 */
 .f-col3{
   max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
 }
+
 .f-col3 p{
   font-size: larger;
 }
-/* .f-col3 a{
-  color: white;
-  font-size: 16px;
-  font-weight: 400;
-} */
+
 .f-col3 img{
   width: 150px;
   margin-top: 10px;
+}
+
+.f-col3 .links{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 /* Footer Responsive */
@@ -378,13 +473,14 @@ svg{
 @media screen and (max-width: 525px){
   .footer .cont{
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: 50px;
   }
   .footer .f-col3{
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
+    gap: 20px;
   }
-
   .footer .f-col3 img{
     width: 150px;
     height: 150px;

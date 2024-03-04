@@ -1,28 +1,39 @@
-/* Start varaibles */
-
-/* End variables */
-
-/*Start Global Rules */
-*{
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
+/* Start Global Rules */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url('../../gotham/GothamRounded-Medium.otf');
+}
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url('../../gotham/GothamRounded-Bold.otf');
+  font-weight: bold;
+}
+*::-moz-selection { /* Code for Firefox */
+  background:#FeAA14;
+}
+
+*::selection {
+  background:#FeAA14;
+}
+
 /* font-family: "Montserrat", sans-serif; */
-/* font-family: "Varela Round", sans-serif; */
+/* font-family: ""Gotham Rounded"", sans-serif; */
 
 body{
-    background-color: white;
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 body::-webkit-scrollbar{
   display: none;
 }
+
 li{
   list-style: none;
 }
@@ -33,29 +44,24 @@ a{
   font-family: "Montserrat", sans-serif;
 }
 
-h2{
-  font-family: "Varela Round", sans-serif;
-}
-h3{
-  font-family: "Varela Round", sans-serif;
-}
-h4{
-  font-family: "Montserrat", sans-serif;
-}
 
-/* End Global Rules */
+
+
+
+
 /* Start Header */
 header{
   position: relative;
-  padding: 0 2rem;
+  padding: 15px 2rem 0px 2rem;
   z-index: 3;
 }
 header a{
   text-decoration: none;
   color: #222939;
-  font-size: 1rem;
-  font-family: "Varela Round", sans-serif;
-  font-weight: 600;
+  font-size: 1.3rem;
+  /* font-family:  */
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 header a:hover{
   color:#FeAA14;
@@ -73,7 +79,7 @@ header a:hover{
   padding-top: 1px;
 }
 .navbar .logo img{
-  height: 55px;
+  height: 60px;
 }
 .navbar .links{
   display: flex;
@@ -87,10 +93,10 @@ header a:hover{
 .act_btn{
   background-color: orange;
   color: #222939;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.8rem;
   border-radius: 20px;
-  font-family: "Varela Round", sans-serif;
-  font-size: 0.8rem;
+  font-family: "Gotham Rounded";
+  font-size: 1.05rem;
   font-weight: bold;
   border: none;
   outline: none;
@@ -119,21 +125,22 @@ header a:hover{
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu.open{
-  height: 330px;
-
+  height: 300px;
 }
 .dropdown_menu li{
   padding: 0.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 .dropdown_menu .act_btn{
   width: 100%;
   display: flex;
   justify-content: center;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 /* responsive */
 @media screen and (max-width: 1015px) {
@@ -144,7 +151,6 @@ header a:hover{
   
   .navbar .toggle_btn{
     display: block;
-
   }
 
   .dropdown_menu{
@@ -156,7 +162,7 @@ header a:hover{
     left: 2rem;
     width: unset;
   }
-  }
+}
 /* End header */
 
 
@@ -172,16 +178,21 @@ header a:hover{
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Montserrat", sans-serif;
 }
 .info{
   max-width: 400px;
   align-items: left;
   line-height: 19px;
+  margin-top: 50px;
+}
+.info h1{
+  font-family: "Gotham Rounded", sans-serif;
 }
 img{
   width: auto;
   height: auto;
-  max-width:625px;
+  max-width:750px;
 }
 @media screen and (max-width: 877px) {
   .press{
@@ -207,171 +218,236 @@ img{
 
 
 
-.container{
-  display: flex;
-  flex-direction: column;
+@keyframes showcard{
+  from{
+    transform:translateY(300px);
+    filter: blur(10px);
+    opacity: 0;
+}to{
+    transform:translateY(0);
+    opacity: 1;
+    filter: blur(0px);
 }
-.item{
-  position: relative;
+}
+
+.articles{
+  display: flex;
+  justify-content: center;
+  height: 1000px;
+  gap: 100px;
+}
+.main{
+
+}
+.main .article-card{
   display: flex;
   flex-direction: column;
-  align-content: center;
-  width: 410px;
-  height: 800px;
-  background-image: linear-gradient(to top,#AEC0CE, #ECECF2);
-  overflow: hidden;
-  transition: 0.5s ;
-  margin: 10px;
-  border-radius: 15px;
-  box-shadow: 0 10px 15px #7e878d;
-  scroll-snap-align: start;
+  gap: 10px;
+  width: 680px;
+  opacity: 0;
+  border-radius: 25px;
+  padding: 15px 15px;
+}
+.main .article-card.active{
+  opacity: 1;
+  animation: showcard 2s;
+}
+.main .article-card .details{
+
+}
+.main .article-card img{
+  width: 680px;
+  border-radius: 25px;
+}
+
+
+.side{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 660px;
+  height: 700px;
+  overflow: auto;
+  padding-right: 15px;
+}
+.side .side-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  padding: 15px 15px;
+  gap: 15px;
+}
+.side .side-card:hover{
+  background: rgba(238, 238, 238, 1);
+  transition: all 1s;
+}
+.side .side-card.active{
+  background: rgba(254, 170, 20, 0.08);
+}
+.side .side-card .card-info{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+.side .side-card .card-info .title{
+  font-size: 16px;
+  font-family: "Gotham Rounded", sans-serif;
+  font-weight: bold;
+}
+.side .side-card img{
+  height: 200px;
+  border-radius: 5%;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+@media screen and (max-width: 1500px){
+  .articles{
+    gap: 0px;
   }
-  .item:hover{
-    scale: 1.05; 
+  .main{
+    margin-right: 50px;
   }
-  .contain{
-    padding: 50px 30px;
+  .main .article-card{
+    gap: 10px;
+    width: 500px;
+  }
+
+  .main .article-card img{
+    width: 500px;
+  }
+  .side .side-card .card-info{
+    height: 100px;
+    font-size: 14px;
+  }
+  .side{
+    /* width: 600px; */
+    margin-left: -40px;
+  }
+  .side .side-card img{
+    height: 150px;
+  }
+}
+@media screen and (max-width: 1200px){
+  .articles{
+    flex-direction: column;
+    align-items: center;
+    height: 1500px;
+    gap: 50px;
+  }
+  .main{
+  display: flex;
+  align-items: flex-start;
+  }
+  .main .article-card{
+    display: none;
+    width: 800px;
+    
+}
+  .main .article-card.active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .article-card img{
+    width: 700px;
+  }
+  .side{
+  width: 800px;
+  }
+}
+@media screen and (max-width: 900px){
+  .main{
+  display: flex;
+  align-items: flex-start;
+  }
+  .main .article-card{
+    display: none;
+    width: 500px;
+    
+}
+  .main .article-card.active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .article-card img{
+    width: 500px;
+  }
+  .side{
+  width: 600px;
+  }
+}
+@media screen and (max-width: 700px){
+  .main{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    height: 1300px;
+    overflow: auto;
+    margin-left: 50px;
   }
-  .card_title{
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
+  .main .article-card{
+    width: 300px;
+    opacity: 1;
+    display: flex;
+    text-align: left;
+}
+  .main .article-card.active{
+    animation: unset;
   }
-  .card_info{
-    padding-bottom: 5px;
-    font-size: 15px;
-    color: #333;
-    font-weight: 500;
-  }
-  
-  .card_btn{
-    margin-left: -5px;
-    border-radius: 20px;
-    border: none;
-    padding: 10px 15px;
-    background-color: orange;
-    color: #000;
-    outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.5s ;
-    box-shadow: 0 10px 15px #7e878d;
-  }
-  .card_btn:hover{
-    scale: 1.05; 
-    color: #000;
-  }
-  .card_btn:active{
-    scale: 0.95;
-    color: #000;
-  }
-  
-  .item .card_img{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 410px;
-    max-height:410px ;
-  }
-  .item img{
-    display: block;
+  .main .article-card img{
     width: 300px;
   }
-  
-  
-  #list{
-  display: flex;
-  width: max-content ;
+  .side{
+  display: none;
   }
-  #cards{
-    width: 1280px;
-    max-width: 100%;
-    overflow: auto;
-    margin: 100px auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: both;
-  
-  }
-  #cards::-webkit-scrollbar{
-    display: none;
-  
-  }
-  
-  
-  .arrows{
-    text-align: center;
-  }
-  .arrows button{
-    margin: 0 50px;
-    z-index: 2;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-family: monospace;
-    background-color: #eee5;
-    border: none;
-    color: #333;
-    font-weight: bold;
-    font-size: large;
-    cursor: pointer;
-    transition: 0.5s;
-  }
-  .arrows button:hover{
-    background-color: #333;
-    color: #fff;
-  }
-  
-  @media screen and (max-width:1275px) {
-    .item{
-      width: calc(33.3vw - 17px);
-    }
-  }
-  @media screen and (max-width:1024px) {
-    .item{
-      width: calc(33.3vw - 17px);
-    }
-  }
-  @media screen and (max-width:768px) {
-    .item{
-      width: calc(50vw - 17px);
-    }
-  }
-  @media screen and (max-width:576px){
-    .item{
-      width: calc(100vw - 15px);
-    } 
-    }
-
-
+}
 /* Start Footer */
 /* font-family: "Montserrat", sans-serif; */
-/* font-family: "Varela Round", sans-serif; */
+/* font-family: "Gotham Rounded", sans-serif; */
 .footer{
   background-color: #222939;
   font-family: "Montserrat", sans-serif; 
   color: white;
   font-size: 12px;
   overflow: hidden;
-  border: 0px;
+  border: none;
 }
 svg{
   width: 200%;
   height: 100px;
-  border: 0px;
+  border: none;
+  /* color: white; */
+  /* background-color: #FFF; */
 }
 .footer .cont{
-  border: 0px;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 0px 40px 20px 40px;
   gap: 250px;
+}
+.footer h3{
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
 
 /* Col 1 */
@@ -389,9 +465,11 @@ svg{
 }
 .title{
   font-size: 17px;
-  font-weight: 600;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
 }
-.f-col1 .icons{
+
+.f-col1 i, .icons{
   color: #FeAA14;
   font-size: 50px;
 }
@@ -409,10 +487,10 @@ svg{
   justify-content: space-between;
   align-items: flex-start;
   max-width: 250px;
-  gap: 20px;
+  gap: 10px;
 }
 .f-col2 h4{
-  font-size: larger;
+  font-family: "Gotham Rounded";
 }
 .f-col2 p{
   font-size: larger;
@@ -454,9 +532,9 @@ svg{
   }
   .footer .f-col3{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    gap: 50px;
   }
-
   .footer .f-col3 img{
     width: 150px;
     height: 150px;

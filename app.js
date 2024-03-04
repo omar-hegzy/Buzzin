@@ -76,38 +76,55 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 
 //Start Features
-let nextBtn =document.getElementById('fnext');
-let prevBtn =document.getElementById('fprev');
-let lastPosition= list.length -1;
-let active =0;
 
-nextBtn.onclick =function(){
-  const widthItem =document.querySelector('.Features-item').offsetWidth;
-  document.getElementById('fcards').scrollLeft += (widthItem);
-}
-prevBtn.onclick =function(){
-  let newValue= active - 1 < 0 ? lastPosition  : active - 1;
-  const widthItem =document.querySelector('.Features-item').offsetWidth;
-  document.getElementById('fcards').scrollLeft -= (widthItem);
-}
-const observerR =new IntersectionObserver((entries) => {
-  entries.forEach((entry) =>{
-    if(entry.isIntersecting ){
-      entry.target.classList.add('show-r');
-      }
-  });
-});
-const hiddenElementsR = document.querySelectorAll('.hidden-r');
-hiddenElementsR.forEach((el) => observerR.observe(el));
-const observerL =new IntersectionObserver((entries) => {
+const featureobserver =new IntersectionObserver((entries) => {
   entries.forEach((entry) =>{
     if(entry.isIntersecting){
-      entry.target.classList.add('show-l');
+      entry.target.classList.add('feature-show');
       }
   });
 });
-const hiddenElementsL= document.querySelectorAll('.hidden-l');
-hiddenElementsL.forEach((el) => observerL.observe(el));
+
+const feature1= document.querySelectorAll('.feature-1-hide');
+const feature2= document.querySelectorAll('.feature-2-hide');
+feature1.forEach((el) => featureobserver.observe(el));
+feature2.forEach((el) => featureobserver.observe(el));
+
+
+
+
+// let nextBtn =document.getElementById('fnext');
+// let prevBtn =document.getElementById('fprev');
+// let lastPosition= list.length -1;
+// let active =0;
+
+// nextBtn.onclick =function(){
+//   const widthItem =document.querySelector('.Features-item').offsetWidth;
+//   document.getElementById('fcards').scrollLeft += (widthItem);
+// }
+// prevBtn.onclick =function(){
+//   let newValue= active - 1 < 0 ? lastPosition  : active - 1;
+//   const widthItem =document.querySelector('.Features-item').offsetWidth;
+//   document.getElementById('fcards').scrollLeft -= (widthItem);
+// }
+// const observerR =new IntersectionObserver((entries) => {
+//   entries.forEach((entry) =>{
+//     if(entry.isIntersecting ){
+//       entry.target.classList.add('show-r');
+//       }
+//   });
+// });
+// const hiddenElementsR = document.querySelectorAll('.hidden-r');
+// hiddenElementsR.forEach((el) => observerR.observe(el));
+// const observerL =new IntersectionObserver((entries) => {
+//   entries.forEach((entry) =>{
+//     if(entry.isIntersecting){
+//       entry.target.classList.add('show-l');
+//       }
+//   });
+// });
+// const hiddenElementsL= document.querySelectorAll('.hidden-l');
+// hiddenElementsL.forEach((el) => observerL.observe(el));
 
 // End Features
 //Start Card

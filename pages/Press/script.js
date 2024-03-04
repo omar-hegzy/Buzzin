@@ -11,29 +11,17 @@ toggleBtn.onclick =function() {
 }
 
 
-let nextBtn =document.getElementById('next');
-let prevBtn =document.getElementById('prev');
+let sidecards= document.querySelectorAll(".side-card");
+let cards = document.querySelectorAll(".article-card");
+sidecards.forEach((item , i) => {
+  item.onclick = function(){
+    let active_side=document.querySelector(".side-card.active");
+    active_side.classList.remove("active");
+    item.classList.add("active");
+    let active_card=document.querySelector(".article-card.active");
+    active_card.classList.remove("active");
+    cards[i].classList.add("active");
+  }
+});
 
-
-let lastPosition= list.length -1;
-let active =0;
-
-
-
-
-
-
-nextBtn.onclick =function(){
-
-  const widthItem =document.querySelector('.item').offsetWidth;
-  document.getElementById('cards').scrollLeft += (widthItem);
-
-}
-
-prevBtn.onclick =function(){
-  let newValue= active - 1 < 0 ? lastPosition  : active - 1;
-  const widthItem =document.querySelector('.item').offsetWidth;
-  document.getElementById('cards').scrollLeft -= (widthItem);
-  
-}
 
