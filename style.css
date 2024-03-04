@@ -1041,7 +1041,7 @@ transition-delay: 0.5s;
 .Features-1 .feature-info{
   text-align: right;
 }
-.feature-info h4{
+.feature-info h3{
   font-size: 18px;
   font-family: "Gotham Rounded";
   color: #333;
