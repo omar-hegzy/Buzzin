@@ -1041,7 +1041,7 @@ transition-delay: 0.5s;
 .Features-1 .feature-info{
   text-align: right;
 }
-.feature-info h3{
+.feature-info h2{
   font-size: 18px;
   font-family: "Gotham Rounded";
   color: #333;
@@ -1471,7 +1471,7 @@ svg{
   padding: 0px 40px 20px 40px;
   gap: 250px;
 }
-.footer h3{
+.footer h2, .footer h1{
   font-family: "Gotham Rounded";
   font-weight: bold;
 }
@@ -1516,7 +1516,7 @@ svg{
   max-width: 250px;
   gap: 10px;
 }
-.f-col2 h4{
+.f-col2 h2 ,.f-col2 h1{
   font-family: "Gotham Rounded";
 }
 .f-col2 p{
