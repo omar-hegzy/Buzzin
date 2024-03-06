@@ -39,7 +39,8 @@ const showSlider = (type) => {
         listHTML.prepend(items[items.length - 1]);
         carousel.classList.add('prev');
     }
-
+        nextButton.style.pointerEvents = 'auto';
+        prevButton.style.pointerEvents = 'auto';
 }
 seeMoreButtons.forEach((button) => {
     button.onclick = function(){
