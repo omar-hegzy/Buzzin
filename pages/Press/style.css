@@ -172,18 +172,17 @@ header a:hover{
   justify-content: space-between;
   align-items: center;
   width: auto;
-  height: 440px;
+  min-height: 440px;
   max-width: 1140px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 50px;
 }
 .info{
-  max-width: 400px;
   align-items: left;
-  line-height: 19px;
   margin-top: 50px;
 }
 .info h1{
@@ -194,25 +193,38 @@ img{
   height: auto;
   max-width:750px;
 }
-@media screen and (max-width: 877px) {
+@media screen and (max-width: 1200px) {
+  .press{
+    margin-top: 70px;
+    /* flex-direction: column; */
+    align-items: center;  
+  }
+  .press img{
+    width: 600px;
+    }
+}
+@media screen and (max-width: 1050px) {
   .press{
     margin-top: 70px;
     flex-direction: column;
     align-items: center;  
   }
   .press img{
-    width: 500px;
+    width: 700px;
     }
 }
 @media screen and (max-width: 750px) {
-  .press{
-  margin-top: 70px;
-  flex-direction: column;
-  }
+  .press img{
+    width: 500px;
+    }
 }
 @media screen and (max-width: 500px) {
+  .press {
+    margin: 0;
+  }
   .press img{
-  width: 350px;
+    width: auto;
+    max-width: 350px;
   }
 }
 
@@ -237,9 +249,12 @@ img{
   gap: 100px;
 }
 .main{
-
+  display: flex;
+  position: relative;
+  width: 700px;
 }
 .main .article-card{
+  position: absolute;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -354,11 +369,12 @@ img{
   .main{
   display: flex;
   align-items: flex-start;
+  width: unset;
   }
   .main .article-card{
     display: none;
     width: 800px;
-    
+    position: unset;
 }
   .main .article-card.active{
     display: flex;
