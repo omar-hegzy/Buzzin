@@ -1335,7 +1335,7 @@ transition-delay: 0.2s;
 }
 .slider img{
   margin: 0 40px;
-  width: 150px;
+  height: 150px;
   z-index: -1;
 }
 @media screen and (max-width: 500px){
