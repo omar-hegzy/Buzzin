@@ -28,6 +28,7 @@ body{
   background-color: white;
   font-family: "Montserrat", sans-serif;
   margin: 0;
+  padding: 0;
 }
 body::-webkit-scrollbar{
   display: none;
@@ -165,7 +166,8 @@ header a:hover{
   justify-content: space-between;
   align-items: center;
   width: auto;
-  height: 440px;
+  height: auto;
+  min-height: 465px;
   max-width: 1140px;
   padding-left: 15px;
   padding-right: 15px;
@@ -184,7 +186,7 @@ h1{
 img{
   width: auto;
   height: auto;
-  max-width:625px;
+  max-width:650px;
 }
 @media screen and (max-width: 893px) {
   .JOT h1{
@@ -209,7 +211,7 @@ img{
 
 /* Start Footer */
 /* font-family: "Montserrat", sans-serif; */
-/* font-family: "Gotham Rounded", sans-serif; */
+/* font-family: "Varela Round", sans-serif; */
 .footer{
   background-color: #222939;
   font-family: "Montserrat", sans-serif; 
@@ -233,7 +235,7 @@ svg{
   padding: 0px 40px 20px 40px;
   gap: 250px;
 }
-.footer h2{
+.footer h2, .footer h1{
   font-family: "Gotham Rounded";
   font-weight: bold;
 }
@@ -278,7 +280,7 @@ svg{
   max-width: 250px;
   gap: 10px;
 }
-.f-col2 h4{
+.f-col2 h2 ,.f-col2 h1{
   font-family: "Gotham Rounded";
 }
 .f-col2 p{
@@ -292,7 +294,11 @@ svg{
 .f-col3 p{
   font-size: larger;
 }
-
+/* .f-col3 a{
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+} */
 .f-col3 img{
   width: 150px;
   margin-top: 10px;
@@ -321,8 +327,8 @@ svg{
   }
   .footer .f-col3{
     display: flex;
-    align-items: center;
-    gap: 50px;
+    align-items: flex-end;
+    gap: 20px;
   }
   .footer .f-col3 img{
     width: 150px;
