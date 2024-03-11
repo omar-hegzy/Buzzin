@@ -57,7 +57,6 @@ backButton.onclick = function(){
 //End Carousel
 
 //Start Video
-
 const observer =new IntersectionObserver((entries) => {
   entries.forEach((entry) =>{
     if(entry.isIntersecting){
@@ -65,12 +64,9 @@ const observer =new IntersectionObserver((entries) => {
       }
   });
 });
-
 const hiddenElements= document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
-
 // End Video
-
 
 //Start Features
 const featureobserver =new IntersectionObserver((entries) => {
@@ -85,6 +81,7 @@ const feature1= document.querySelectorAll('.feature-1-hide');
 const feature2= document.querySelectorAll('.feature-2-hide');
 feature1.forEach((el) => featureobserver.observe(el));
 feature2.forEach((el) => featureobserver.observe(el));
+//End Features
 
 //Start Card
 var swiper = new Swiper(".slide-content", {

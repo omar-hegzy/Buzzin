@@ -10,16 +10,12 @@
   font-weight: bold;
   font-display: swap
 }
-*::-moz-selection { /* Code for Firefox */
+*::-moz-selection { 
   background:#FeAA14;
 }
-
 *::selection {
   background:#FeAA14;
 }
-/* font-family: "Montserrat", sans-serif; */
-/* font-family: "Varela Round", sans-serif; */
-
 body{
   display: flex;
   flex-direction: column;
@@ -31,7 +27,6 @@ body{
 body::-webkit-scrollbar{
   display: none;
 }
-
 li{
   list-style: none;
 }
@@ -76,14 +71,12 @@ a{
   filter: blur(5px);
   transform: translateX(-100%);
 }
-
 .feature-1-hide{
   transform: translateX(-100%);
   filter: blur(5px);
   opacity: 0;
   transition: all 1s;
 }
-
 .feature-2-hide{
   transform: translateX(100%);
     filter: blur(5px);
@@ -100,21 +93,13 @@ a{
   filter: blur(0);
   transform: translateX(0);
 }
-
-
-
 @media(prefers-reduced-motion){
   .hidden{
     transition: none;
   }
 
 }
-
-
-
-
 /* Animation */
-
 
 /* Start Header */
 header{
@@ -919,64 +904,6 @@ background-color:#dec8a2;
 }
 /* End Video */
 
-/* Start Price */
-.Soultions{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: auto;
-  max-width: 700px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.Soultions h1{
-  text-align: center;
-  font-size: 2em;
-  font-family: "Gotham Rounded";
-  font-weight: bold;
-  line-height: 1em;
-  padding-bottom: 0.2em;
-}
-.Soultions p{
-  margin-top: 24px;
-  font-size: 16px;
-  line-height: 24px;
-}
-@media screen and (max-width: 500px){
-  .Soultions h1{
-    font-size: 1.2em;
-  }
-}
-.Soultions button{
-  margin-top: 20px;
-  font-family: "Varela Round", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  background-color: white;
-  color: #222939;
-  border-radius: 15px;
-  padding: 8px 15px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: scale 0.2 ease;
-}
-.Soultions button:hover{
-  scale: 1.05; 
-  color: #222939;
-  background-color:#FeAA14;
-}
-.Soultions button:active{
-  scale: 0.95;
-}
-/* End Price */
-
 /* Start Features */
 .Our_Features{
   display: flex;
@@ -1229,7 +1156,6 @@ transition-delay: 0.2s;
 .slide-container .swiper-pagination-bullet-active{
   background-color: #FeAA14;
 }
-
 @media screen and (max-width: 768px) {
   .slide-container .slide-content{
     margin: 0 10px;
@@ -1239,8 +1165,6 @@ transition-delay: 0.2s;
   }
 }
 /* End Card  */
-
-
 
 /* Start Price */
 .pricing{
@@ -1448,8 +1372,6 @@ transition-delay: 0.2s;
 /* End Communities */
 
 /* Start Footer */
-/* font-family: "Montserrat", sans-serif; */
-/* font-family: "Varela Round", sans-serif; */
 .footer{
   background-color: #222939;
   font-family: "Montserrat", sans-serif; 
