@@ -247,6 +247,9 @@ h4{
   .About img{
   width: 350px;
   }
+  .About .info{
+    line-height: 40px;
+  }
   .content{
     flex-direction: column-reverse;
     padding: 15px;

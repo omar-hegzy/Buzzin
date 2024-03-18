@@ -244,6 +244,9 @@ h4{
   .About{
     font-size: 20px ;
   }
+  .About .info{
+    line-height: 40px;
+  }
   .About img{
   width: 350px;
   }

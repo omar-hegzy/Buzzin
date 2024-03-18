@@ -680,10 +680,6 @@ header a:hover{
     .carousel{
         height: 720px;
     }
-    .carousel.showDetail .list .item:nth-child(2) img.vms{
-      width: 40%;
-      top: 15%;
-    }
     .carousel.showDetail .list .item:nth-child(2) img{
         width: 50%;
         top: 20%;
@@ -792,17 +788,18 @@ header a:hover{
     width: 100%;
   }
   .carousel.showDetail .list .item:nth-child(2) img{
-    width: 80%;
-    left: unset;
-    left: 1%;
-    top: 15%;
-    }
+    left: 25px;
+  }
   .carousel.showDetail .list .item:nth-child(2) .detail{
     top: 55%;
   }
   .carousel.showDetail .list .item:nth-child(2) .detail .title{
       font-size: 1.2em;
   }
+  .carousel.showDetail .list .item:nth-child(2) .aboutus{
+    top: 45%;
+  }
+
   .carousel.showDetail .list .item:nth-child(2) .detail .des{
     font-size: 0.65em;
     line-height: 15px;
