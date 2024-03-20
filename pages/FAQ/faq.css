@@ -363,21 +363,17 @@ svg{
 }
 
 /* Col 3 */
+/* Col 3 */
 .f-col3{
   max-width: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
 }
-
 .f-col3 p{
   font-size: larger;
 }
-
 .f-col3 img{
   width: 150px;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: -20px;
 }
 
 .f-col3 .links{
@@ -403,15 +399,15 @@ svg{
     gap: 10px;
   }
 }
-@media screen and (max-width: 525px){
+@media screen and (max-width: 550px){
   .footer .cont{
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: 20px;
   }
   .footer .f-col3{
     display: flex;
-    align-items: flex-end;
-    gap: 20px;
+    align-items: center;
+    gap: 100px;
   }
   .footer .f-col3 img{
     width: 150px;
