@@ -33,7 +33,7 @@
           <li><a href="./pages/JOT/index.html">Join Our Team</a></li>
           <li><a href="./pages/Contact/contact.html">Contact Us</a></li>
         </ul>
-        <a href="https://dashboard.buzz-in.co" ><button class="act_btn">Login</button></a>
+        <a href="https://dashboard.buzz-in.co" aria-label="Our Dashboard"><button class="act_btn">Login</button></a>
         <div id="toggle_btn" class="toggle_btn">
           <i id="toggle_btn_Icon" class="fa-solid fa-bars"></i>
         </div>
@@ -222,10 +222,13 @@
     <h1 class="vid_ani">
       How it works
     </h1>
-    <video class="vid vid_ani" controls poster="./images/poster.jpg">
+    <video class="vid vid_ani" width="320" height="240" controls poster="./images/poster.jpg">
       <source src="./images/Buzzin.mp4" type="video/mp4">
+      <track src="./images/Buzzin.vtt" kind="captions" srclang="en" label="english_captions">
       Your browser does not support the video tag.
     </video>
+    <!-- <iframe class="vid vid_ani" src="https://www.youtube.com/embed/qvQWPth_y14?si=K4VXDkFZDBx8Wjeh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+    </iframe>  -->
     <p class="vid_ani">
       Embarking on our services is straightforward. Simply get in touch with us, and our sales representative will conduct a comprehensive assessment tailored to your premises. As our solution operates in the cloud, there's no need for us to access your data center or install any servers or hardware on-site—the only thing you’ll need is an Android tablet provided by Buzzin. Upon implementation, users at your premises can easily download the app for swift access.
     </p>
