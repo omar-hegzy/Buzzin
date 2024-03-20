@@ -131,7 +131,8 @@ header a:hover{
   padding-top: 1px;
 }
 .navbar .logo img{
-  height: 60px;
+  height: 80px;
+  margin-right: -40px;
 }
 .navbar .links{
   display: flex;
