@@ -184,6 +184,7 @@ header a:hover{
 .info{
   align-items: left;
   margin-top: 50px;
+  margin-left: 20px;
 }
 .info h1{
   font-family: "Gotham Rounded", sans-serif;
@@ -193,39 +194,88 @@ img{
   height: auto;
   max-width:750px;
 }
+.mobile{
+  display: none;
+}
 @media screen and (max-width: 1200px) {
   .press{
-    margin-top: 70px;
-    /* flex-direction: column; */
-    align-items: center;  
+    align-items: center;
   }
   .press img{
     width: 600px;
     }
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1035px) {
   .press{
-    margin-top: 70px;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
+    
+
+  }
+  .info{
+    width: 700px;
+    margin-right: 50px;
   }
   .press img{
     width: 700px;
-    }
+
+  }
+  .desk{
+    display: none;
+  }
+  .mobile{
+    display: block;
+    padding-bottom: 20px;
+  }
+  h1{
+    text-align: center;
+    font-size: 2em;
+  }
+  p{
+    width: 500px;
+    margin-left: 110px;
+  }
 }
 @media screen and (max-width: 750px) {
+
   .press img{
     width: 500px;
+    margin-left: 0px;
+    }
+
+    .info{
+      width: 500px;
+    }
+    p{
+      margin-left: 0px;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+
+  .press{
+    margin-bottom: 0px;
+  }
+
+}
+@media screen and (max-width: 550px) {
   .press {
-    margin: 0;
+    width: auto;
+    max-width: 350px;
+    padding-left: 45px;
   }
   .press img{
     width: auto;
     max-width: 350px;
   }
+  .info {
+    width: auto;
+    max-width: 350px;
+  }
+  p{
+    width: auto;
+    max-width: 350px;
+  }
+
 }
 @keyframes showcard{
   from{
@@ -421,7 +471,7 @@ img{
   .main{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     height: 1300px;
     overflow: auto;
     margin-left: 50px;
