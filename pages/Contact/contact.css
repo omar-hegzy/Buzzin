@@ -391,7 +391,7 @@ svg{
   padding: 0px 40px 20px 40px;
   gap: 250px;
 }
-.footer h2{
+.footer h1{
   font-family: "Gotham Rounded";
   font-weight: bold;
 }
@@ -436,8 +436,11 @@ svg{
   max-width: 250px;
   gap: 10px;
 }
-.f-col2 h4{
+.f-col2 h2 ,.f-col2 h1{
   font-family: "Gotham Rounded";
+}
+.f-col2 h2{
+  font-size: 16px;
 }
 .f-col2 p{
   font-size: larger;
@@ -450,10 +453,10 @@ svg{
 .f-col3 p{
   font-size: larger;
 }
-
 .f-col3 img{
   width: 150px;
   margin-top: 10px;
+  margin-left: -20px;
 }
 
 /* Footer Responsive */
@@ -475,12 +478,13 @@ svg{
 @media screen and (max-width: 525px){
   .footer .cont{
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: 20px;
   }
   .footer .f-col3{
     display: flex;
-    align-items: flex-end;
-    gap: 20px;
+    align-items: center;
+    gap: 100px;
+
   }
   .footer .f-col3 img{
     width: 150px;

@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buzzin: UAE's Most Advanced Visitor Management System.</title>
     <meta name="description" content=" Revolutionize your visitor management system in UAE with our innovative system. Streamline processes, enhance security, and create a seamless experience.">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PBBVGGX6');</script>
+  <!-- End Google Tag Manager -->
+
+
     <link fetchPriority="high" rel="preload" href="./images/img2.png" as="image">
     <link fetchPriority="high" rel="preload" href="./images/Event_Management_Solution.png" as="image">
     <link rel="preload" href="./gotham/GothamRounded-Medium.otf" as="font" type="font/woff2" crossorigin>
@@ -24,30 +34,45 @@
 </head>
 <body>
   <header>
-      <div class="navbar">
-        <div class="logo"><a href="#"><img src="images/Logo-01.png" alt="Logo"></a></div>
-        <ul class="links">
-          <li><a href="#">Home</a></li>
-          <li><a href="./pages/Press/index.html">Press</a></li>
-          <li><a href="./pages/FAQ/faq.html">FAQ</a></li>
-          <li><a href="./pages/JOT/index.html">Join Our Team</a></li>
-          <li><a href="./pages/Contact/contact.html">Contact Us</a></li>
-        </ul>
-        <a href="https://dashboard.buzz-in.co" aria-label="Our Dashboard"><button class="act_btn">Login</button></a>
-        <div id="toggle_btn" class="toggle_btn">
-          <i id="toggle_btn_Icon" class="fa-solid fa-bars"></i>
-        </div>
-      </div>
-      <div id="dropdown_menu" class="dropdown_menu ">
-        <ul>
+    <div class="navbar">
+      <div class="logo"><a href="#"><img src="images/Logo-01.png" alt="Logo"></a></div>
+      <ul class="links">
         <li><a href="#">Home</a></li>
+        <li><a class="sol" id="sol">Our Solutions</a></li>
         <li><a href="./pages/Press/index.html">Press</a></li>
         <li><a href="./pages/FAQ/faq.html">FAQ</a></li>
         <li><a href="./pages/JOT/index.html">Join Our Team</a></li>
         <li><a href="./pages/Contact/contact.html">Contact Us</a></li>
+        <div id="dropdown_sol" class="dropdown_sol">
+        <ul>
+          <li><a href="./pages/Solutions/VMS/index.html">Visitor Managment System</a></li>
+          <li><a href="./pages/Solutions/WorkP/index.html">Work Permit System</a></li>
+          <li><a href="./pages/Solutions/EventM/index.html">Event Management System</a></li>
+          <li><a href="./pages/Solutions/Attendance/index.html">Attendance System</a></li>
+        </ul>
+      </div>
+      </ul>
+      
+      <a href="https://dashboard.buzz-in.co" aria-label="Our Dashboard"><button class="act_btn">Login</button></a>
+      <div id="toggle_btn" class="toggle_btn">
+        <i id="toggle_btn_Icon" class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div id="dropdown_menu" class="dropdown_menu ">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <!-- <li><a class="sol" id="sm-sol">Our Solutions</a></li> -->
+        <li><a href="./pages/FAQ/faq.html">Frequently Asked Questions</a></li>
+        <li ><a href="./pages/Solutions/VMS/index.html">Visitor Management System</a></li>
+        <li ><a href="./pages/Solutions/WorkP/index.html">Work Permit System</a></li>
+        <li ><a href="./pages/Solutions/EventM/index.html">Event Management</a></li>
+        <li ><a href="./pages/Solutions/Attendance/index.html">Attendance System</a></li>
+        <li><a href="./pages/JOT/index.html">Join Our Team</a></li>
+        <li><a href="./pages/Contact/contact.html">Contact Us</a></li>
+        <li><a href="./pages/Press/index.html">Press</a></li>
         <li><a href="https://dashboard.buzz-in.co"class="act_btn">Login</a></li>
       </ul>
-      </div>
+    </div>
   </header>
 
   <div class="carousel">
@@ -60,7 +85,7 @@
                   <div class="des">
                     Elevate your monitoring and tracking of attendance records with enhanced precision and efficiency.
                   </div>
-                  <button class="seeMore">KNOW MORE &#8599</button>
+                  <button class="seeMore"> <a class="seeMore" href="./pages/Solutions/Attendance/index.html">KNOW MORE &#8599</a></button>
               </div>
               <div class="detail">
                   <div class="title">Our Attendance system</div>
@@ -94,7 +119,7 @@
                   <div class="des">
                     Your premier destination for cutting-edge visitor management solutions! Experience the future with our state-of-the-art Visitor Management System (VMS), reshaping visitor experiences and enhancing operational efficiency.
                   </div>
-                  <button class="seeMore">KNOW MORE &#8599</button>
+                  <button class="seeMore About">KNOW MORE &#8599</button>
               </div>
               <div class="detail aboutus">
                   <div class="title">About Us</div>
@@ -112,7 +137,7 @@
                   <div class="des">
                     Ensure seamless entry for your visitors by streamlining the registration process with our advanced solution.
                   </div>
-                  <button class="seeMore">KNOW MORE &#8599</button>
+                  <button class="seeMore"> <a class="seeMore" href="./pages/Solutions/VMS/index.html">KNOW MORE &#8599</a></button>
               </div>
               <div class="detail">
                   <div class="title">Our Visitor Management System</div>
@@ -148,7 +173,7 @@
                 <div class="des">
                   Centralize and digitize the issuance of work permits to contractors, simplifying the process and enhancing efficiency.
                 </div>
-                <button class="seeMore">KNOW MORE &#8599</button>
+                <button class="seeMore"> <a class="seeMore" href="./pages/Solutions/WorkP/index.html">KNOW MORE &#8599</a></button>
             </div>
             <div class="detail">
                 <div class="title">Our Work Permit Solution</div>
@@ -183,7 +208,7 @@
                   <div class="des">
                     Enhance your invitees' entry process with swift access, granting them an enjoyable experience.
                   </div>
-                  <button class="seeMore">KNOW MORE &#8599</button>
+                  <button class="seeMore"> <a class="seeMore" href="./pages/Solutions/EventM/index.html">KNOW MORE &#8599</a></button>
               </div>
               <div class="detail">
                   <div class="title"> Our Event Management Solution</div>
@@ -504,9 +529,15 @@
       </div>
     </div>
   </div> 
+
+  
     <!-- Swiper JS -->
   <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
   <script src="app.js"></script>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBBVGGX6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 </body>
 </html>
 

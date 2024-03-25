@@ -2,8 +2,16 @@
 let toggleBtn =document.getElementById('toggle_btn');
 let toggleBtnIcon =document.getElementById('toggle_btn_Icon');
 let dropDownMenu =document.getElementById('dropdown_menu');
+let solutions =document.getElementById('sol');
+let dropDownSol =document.getElementById('dropdown_sol');
+
+
+solutions.onclick= function() {
+  dropDownSol.classList.toggle('open')
+}
 toggleBtn.onclick =function() {
   dropDownMenu.classList.toggle('open')
+  dropDownSol.classList.remove('open');
   const isOpen =dropDownMenu.classList.contains('open')
   toggleBtnIcon.classList =isOpen
   ? 'fa-solid fa-xmark'
@@ -16,7 +24,7 @@ let nextButton = document.getElementById('next');
 let prevButton = document.getElementById('prev');
 let carousel = document.querySelector('.carousel');
 let listHTML = document.querySelector('.carousel .list');
-let seeMoreButtons = document.querySelectorAll('.seeMore');
+let seeMoreButtons = document.querySelectorAll('.About');
 let backButton = document.getElementById('back');
 
 nextButton.onclick = function(){
@@ -54,6 +62,7 @@ backButton.onclick = function(){
     carousel.classList.remove('showDetail');
     backButton.style.display="none";
 }
+
 //End Carousel
 
 //Start Video

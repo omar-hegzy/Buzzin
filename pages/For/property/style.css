@@ -350,10 +350,10 @@ svg{
 .f-col3 p{
   font-size: larger;
 }
-
 .f-col3 img{
   width: 150px;
   margin-top: 10px;
+  margin-left: -20px;
 }
 
 /* Footer Responsive */
@@ -375,12 +375,13 @@ svg{
 @media screen and (max-width: 525px){
   .footer .cont{
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: 20px;
   }
   .footer .f-col3{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
+
   }
   .footer .f-col3 img{
     width: 150px;

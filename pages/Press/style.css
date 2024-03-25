@@ -492,7 +492,11 @@ img{
   display: none;
   }
 }
+
+
 /* Start Footer */
+/* font-family: "Montserrat", sans-serif; */
+/* font-family: "Gotham Rounded", sans-serif; */
 .footer{
   background-color: #222939;
   font-family: "Montserrat", sans-serif; 
@@ -516,7 +520,7 @@ svg{
   padding: 0px 40px 20px 40px;
   gap: 250px;
 }
-.footer h2, .footer h1{
+.footer h1{
   font-family: "Gotham Rounded";
   font-weight: bold;
 }
@@ -540,6 +544,7 @@ svg{
   font-family: "Gotham Rounded";
   font-weight: bold;
 }
+
 .f-col1 i, .icons{
   color: #FeAA14;
   font-size: 50px;
@@ -562,6 +567,9 @@ svg{
 }
 .f-col2 h2 ,.f-col2 h1{
   font-family: "Gotham Rounded";
+}
+.f-col2 h2{
+  font-size: 16px;
 }
 .f-col2 p{
   font-size: larger;
@@ -599,12 +607,13 @@ svg{
 @media screen and (max-width: 525px){
   .footer .cont{
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: 20px;
   }
   .footer .f-col3{
     display: flex;
     align-items: center;
     gap: 100px;
+
   }
   .footer .f-col3 img{
     width: 150px;

@@ -168,6 +168,7 @@ header a:hover{
 .dropdown_menu.open{
   height: 300px;
 }
+
 .dropdown_menu li{
   padding: 0.6rem;
   display: flex;
@@ -176,6 +177,7 @@ header a:hover{
   font-family: "Gotham Rounded";
   font-weight: bold;
 }
+
 .dropdown_menu .act_btn{
   width: 100%;
   display: flex;
@@ -217,16 +219,8 @@ header a:hover{
   padding-left: 5px;
   padding-right: 5px;
 }
-.details .right .top{
-font-weight: 600;
-}
-.details .right {
-  font-size: 10px;
-}
-.details .right .bot{
-  font-style: italic;
-}
-.details .right span{
+.details p{
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -235,10 +229,11 @@ font-weight: 600;
   
 }
 .content h2{
-  font-size: 16px;
+  font-size: 20px;
 }
 .content p{
-  font-size: 12px;
+  font-size: 18px;
+  line-height: 25px;
   font-family: "Montserrat", sans-serif;
   }
 
@@ -268,7 +263,7 @@ svg{
   padding: 0px 40px 20px 40px;
   gap: 250px;
 }
-.footer h3{
+.footer h1{
   font-family: "Gotham Rounded";
   font-weight: bold;
 }
@@ -313,8 +308,11 @@ svg{
   max-width: 250px;
   gap: 10px;
 }
-.f-col2 h4{
+.f-col2 h2 ,.f-col2 h1{
   font-family: "Gotham Rounded";
+}
+.f-col2 h2{
+  font-size: 16px;
 }
 .f-col2 p{
   font-size: larger;
@@ -327,10 +325,10 @@ svg{
 .f-col3 p{
   font-size: larger;
 }
-
 .f-col3 img{
   width: 150px;
   margin-top: 10px;
+  margin-left: -20px;
 }
 
 /* Footer Responsive */
@@ -352,12 +350,13 @@ svg{
 @media screen and (max-width: 525px){
   .footer .cont{
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: 20px;
   }
   .footer .f-col3{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
+
   }
   .footer .f-col3 img{
     width: 150px;

@@ -239,11 +239,11 @@ font-weight: 600;
 
   }
   .details .right{
-    font-size: 14px;
+    font-size: 16px;
     
   }
   .details p{
-    font-size: 12px;
+    font-size: 16px;
   }
   }
 /*  */
@@ -331,12 +331,17 @@ font-weight: 600;
   }
 }
 @media screen and (max-width: 600px){
+  .faq  .accordion-content .title{
+    font-size: 18px;
+  }
+  .accordion-content .acc-description{
+    font-size: 16px;
+  }
   .Terms{
     width: 300px;
   }
   }
 /* End Accordion */
-
 
 
 
@@ -350,11 +355,15 @@ font-weight: 600;
   font-size: 12px;
   overflow: hidden;
   border: none;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 svg{
   width: 200%;
-  height: 100px;
+  height: 150px;
   border: none;
+  /* color: white; */
+  /* background-color: #FFF; */
 }
 .footer .cont{
   border: none;
@@ -363,33 +372,37 @@ svg{
   align-items: flex-start;
   padding: 0px 40px 20px 40px;
   gap: 250px;
+  margin: auto;
 }
-.footer h3{
+.footer h1{
   font-family: "Gotham Rounded";
   font-weight: bold;
 }
-
-/* Col 1 */
-.f-col1{
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 250px;
-  gap: 10px;
-}
-.f-col1 .logo{
-  width: 150px;
-  margin-left: -5px;
-}
-.title{
+.footer .title{
   font-size: 17px;
   font-weight: 600;
   font-family: "Gotham Rounded";
   font-weight: bold;
 }
 
+/* Col 1 */
+.f-col1{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 250px;
+  
+}
+.f-col1 .logo{
+  width: 150px;
+  margin-left: -5px;
+  margin-top: -15px;
+}
+.f-col1 .title{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 .f-col1 i, .icons{
   color: #FeAA14;
   font-size: 50px;
@@ -421,10 +434,13 @@ svg{
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 10px;
+  gap: 15px;
 }
-.f-col2 h4{
+.f-col2 h2 ,.f-col2 h1{
   font-family: "Gotham Rounded";
+}
+.f-col2 h2{
+  font-size: 16px;
 }
 .f-col2 p{
   font-size: larger;
@@ -433,26 +449,19 @@ svg{
 /* Col 3 */
 .f-col3{
   max-width: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
 }
-
-.f-col3 p{
-  font-size: larger;
-}
-
-.f-col3 img{
-  width: 150px;
-  margin-top: 10px;
-}
-
 .f-col3 .links{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 15px;
+}
+.f-col3 p{
+  font-size: larger;
+}
+.f-col3 img{
+  width: 150px;
+  margin-top: 10px;
+  margin-left: -20px;
 }
 
 /* Footer Responsive */
@@ -474,13 +483,13 @@ svg{
 @media screen and (max-width: 525px){
   .footer .cont{
     flex-direction: column-reverse;
-    gap: 50px;
+    gap: 20px;
   }
   .footer .f-col3{
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 20px;
+    align-items: center;
+    gap: 100px;
+
   }
   .footer .f-col3 img{
     width: 150px;
