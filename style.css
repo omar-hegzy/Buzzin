@@ -1,4 +1,13 @@
 /* Start Global Rules */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url('./Montserrat/static/Montserrat-Medium.ttf');
+  font-weight: 500;
+  font-display: swap
+}
 @font-face {
   font-family: "Gotham Rounded";
   src: url('./gotham/GothamRounded-Medium.otf');
@@ -187,6 +196,7 @@ header a:hover{
 .dropdown_sol{
   display: block;
   position: absolute;
+  padding: 0;
   top: 30px;
   left: 130px;
   width: 300px;
@@ -231,7 +241,8 @@ header a:hover{
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu.open{
-  height:450px;
+  padding-top: 10px;
+  height:430px;
 }
 
 .dropdown_menu ul{
@@ -267,14 +278,12 @@ header a:hover{
   .dropdown_menu{
     display: block;
   }
-
   .dropdown_menu li {
-    /* justify-content: space-between; */
+    justify-content: space-between;
   }
   .dropdown_menu li a{
     font-size: 18px;
   }
-
 }
 @media screen and (max-width: 576px){
   .dropdown_menu{
@@ -311,10 +320,12 @@ header a:hover{
 }
 .carousel .list .item:nth-child(n + 6){
     opacity: 0;
+    display: none;
 }
 .carousel .list .item:nth-child(2){
     z-index: 10;
     transform: translateX(0);
+    display: block;
 }
 .carousel .list .item img{
     width: 55%;
@@ -526,6 +537,7 @@ header a:hover{
       /* filter: blur(0px); */
   }
 }
+
 .carousel .list .item:nth-child(2) .introduce span::before{
     position: absolute;
     margin-left: -6px;
@@ -533,7 +545,7 @@ header a:hover{
     width: 50px;
     height: 50px;
     content: '';
-    background-image: url(images/logo.gif);
+    background-image: url(./images/static.png);
     background-size: cover;
     background-repeat: no-repeat;
     animation: movinglogo 5s;
