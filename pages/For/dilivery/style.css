@@ -53,7 +53,7 @@ header{
   padding: 15px 2rem 0px 2rem;
   z-index: 3;
 }
-header a{
+header li, header a{
   text-decoration: none;
   color: #222939;
   font-size: 1.3rem;
@@ -66,7 +66,6 @@ header a:hover{
 }
 .navbar{
   width: 100%;
-  height: 60px;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -77,10 +76,12 @@ header a:hover{
   padding-top: 1px;
 }
 .navbar .logo img{
-  height: 60px;
+  height: 80px;
+  margin-right: -40px;
 }
 .navbar .links{
   display: flex;
+  position: relative;
   gap: 2rem;
 }
 .navbar .toggle_btn{
@@ -89,7 +90,7 @@ header a:hover{
   display: none;
 }
 .act_btn{
-  background-color: orange;
+  background-color:#FeAA14;
   color: #222939;
   padding: 0.5rem 1.8rem;
   border-radius: 20px;
@@ -103,27 +104,87 @@ header a:hover{
 }
 .act_btn:hover{
   scale: 1.05; 
+  background-color:#FeAA14;
   color: #222939;
 }
 .act_btn:active{
   scale: 0.95;
 }
+
+.sol{
+  color: #222939;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+.sol:hover{
+  color:#FeAA14;
+  scale: 1.05;
+}
+.sol:active{
+  scale: 0.95;
+}
 /* dropdown */
+
+.dropdown_sol{
+  display: block;
+  position: absolute;
+  padding: 0;
+  top: 30px;
+  left: 130px;
+  width: 300px;
+  height: 0px;
+  background: rgba(254, 170, 20, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_sol ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.dropdown_sol li{
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
+}
+.dropdown_sol li a{
+  font-size: 19px;
+}
+.dropdown_sol.open{
+  height: 170px;
+}
+
 .dropdown_menu{
   display: none;
   position: absolute;
   right: 2rem;
-  top: 60px;
+  top: 70px;
   width: 300px;
   height: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(254, 170, 20, 0.2);
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu.open{
-  height: 300px;
+  padding-top: 10px;
+  height:430px;
+}
+
+.dropdown_menu ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 .dropdown_menu li{
   padding: 0.6rem;
@@ -133,6 +194,7 @@ header a:hover{
   font-family: "Gotham Rounded";
   font-weight: bold;
 }
+
 .dropdown_menu .act_btn{
   width: 100%;
   display: flex;
@@ -141,18 +203,22 @@ header a:hover{
   font-weight: bold;
 }
 /* responsive */
-@media screen and (max-width: 1015px) {
+@media screen and (max-width: 1068px) {
   .navbar .links,
   .navbar .act_btn{
     display: none;
   }
-  
   .navbar .toggle_btn{
     display: block;
   }
-
   .dropdown_menu{
     display: block;
+  }
+  .dropdown_menu li {
+    justify-content: space-between;
+  }
+  .dropdown_menu li a{
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 576px){
@@ -160,8 +226,9 @@ header a:hover{
     left: 2rem;
     width: unset;
   }
-}
+  }
 /* End header */
+
 
 
 .About{

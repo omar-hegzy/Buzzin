@@ -371,11 +371,11 @@ header a:hover{
     line-height: 25px;
 }
 .carousel .list .item .introduce .seeMore{
-  font-family: "Gotham Rounded";
+    font-family: "Gotham Rounded";
     margin-top: 1.2em;
     padding: 5px 0;
     border: none;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #000;
     background-color: transparent;
     font-weight: bold;
     letter-spacing: 3px;
@@ -383,6 +383,14 @@ header a:hover{
 }
 .carousel .list .item .introduce .seeMore:hover{
     background: #FeAA14;
+}
+.carousel .list .item .introduce .seeMore a{
+  color: #000;
+  font-size: 1em;
+  text-decoration: none;
+  font-family: "Gotham Rounded";
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 .carousel .list .item:nth-child(1){
     transform: var(--item1-transform);
@@ -416,6 +424,7 @@ header a:hover{
 .carousel a:hover{
   color:#FeAA14;
 }
+ 
 /* animation text in item2 */
 .carousel .list .item:nth-child(2) .introduce .title,
 .carousel .list .item:nth-child(2) .introduce .topic,
